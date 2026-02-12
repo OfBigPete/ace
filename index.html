@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ace of Braids - Premium Braiding Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- EmailJS Library -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader"></div>
+        <p>Ace of Braids</p>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>Ace of Braids</h1>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#booking" class="nav-link">Book Now</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title">Ace of Braids</h1>
+            <p class="hero-subtitle">Premium Braiding Services | Luxury Beauty</p>
+            <p class="hero-description">Crafted with precision, styled with passion</p>
+            <a href="#booking" class="btn btn-primary btn-large">Book Now</a>
+        </div>
+        <div class="hero-background"></div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text reveal">
+                    <h2>About Ace of Braids</h2>
+                    <p>Welcome to Ace of Braids, Newcastle's premier destination for luxury braiding services. With over 6 years of experience, we specialize in creating stunning braid styles that celebrate your natural beauty.</p>
+                    <p>Our mission is to provide exceptional service, premium quality, and a welcoming experience that makes every client feel confident and beautiful. We're passionate about our craft and committed to the highest standards of excellence.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>1500+</h3>
+                            <p>Happy Clients</p>
+                        </div>
+                        <div class="stat">
+                            <h3>6+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat">
+                            <h3>50+</h3>
+                            <p>Style Variations</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image reveal">
+                    <div class="image-placeholder">
+                        <img src="images/logo.jpeg" alt="Ace of Braids Logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title reveal">Our Premium Services</h2>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3>Box Braids</h3>
+                    <p>Classic and timeless. Perfect for any occasion.</p>
+                    <p class="price">£60 - £120</p>
+                    <p class="duration">4-6 hours</p>
+                </div>
+
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-sparkles"></i>
+                    </div>
+                    <h3>Cornrows</h3>
+                    <p>Sleek, elegant, and versatile braiding style.</p>
+                    <p class="price">£50 - £100</p>
+                    <p class="duration">3-5 hours</p>
+                </div>
+
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3>Goddess Braids</h3>
+                    <p>Luxurious and statement-making goddess style.</p>
+                    <p class="price">£80 - £150</p>
+                    <p class="duration">5-7 hours</p>
+                </div>
+
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Wig Styling</h3>
+                    <p>Expert wig selection and customization.</p>
+                    <p class="price">£40 - £80</p>
+                    <p class="duration">2-3 hours</p>
+                </div>
+
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Kilo Braids</h3>
+                    <p>Ultra-lightweight and protective styling.</p>
+                    <p class="price">£70 - £130</p>
+                    <p class="duration">4-6 hours</p>
+                </div>
+
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-circle-half-stroke"></i>
+                    </div>
+                    <h3>Crochet Braids</h3>
+                    <p>Quick, versatile, and protective braiding.</p>
+                    <p class="price">£45 - £90</p>
+                    <p class="duration">2-4 hours</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking" id="booking">
+        <div class="container">
+            <h2 class="section-title reveal">Book Your Appointment</h2>
+            <div class="booking-container">
+                <form class="booking-form" id="bookingForm">
+                    <div class="form-group reveal">
+                        <label for="clientName">Full Name *</label>
+                        <input type="text" id="clientName" required placeholder="Enter your full name">
+                    </div>
+
+                    <div class="form-group reveal">
+                        <label for="clientEmail">Email Address *</label>
+                        <input type="email" id="clientEmail" required placeholder="your@email.com">
+                    </div>
+
+                    <div class="form-group reveal">
+                        <label for="clientPhone">Phone Number *</label>
+                        <input type="tel" id="clientPhone" required placeholder="07XXX XXXXXX">
+                    </div>
+
+                    <div class="form-group reveal">
+                        <label for="service">Service *</label>
+                        <select id="service" required>
+                            <option value="">Select a service</option>
+                            <option value="Box Braids - £60-120">Box Braids - £60-120</option>
+                            <option value="Cornrows - £50-100">Cornrows - £50-100</option>
+                            <option value="Goddess Braids - £80-150">Goddess Braids - £80-150</option>
+                            <option value="Wig Styling - £40-80">Wig Styling - £40-80</option>
+                            <option value="Kilo Braids - £70-130">Kilo Braids - £70-130</option>
+                            <option value="Crochet Braids - £45-90">Crochet Braids - £45-90</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group reveal">
+                        <label for="appointmentDate">Preferred Date *</label>
+                        <input type="date" id="appointmentDate" required>
+                    </div>
+
+                    <div class="form-group reveal">
+                        <label for="appointmentTime">Time Slot *</label>
+                        <select id="appointmentTime" required>
+                            <option value="">Select a time</option>
+                            <option value="09:00">09:00 - 10:00</option>
+                            <option value="10:00">10:00 - 11:00</option>
+                            <option value="11:00">11:00 - 12:00</option>
+                            <option value="13:00">13:00 - 14:00</option>
+                            <option value="14:00">14:00 - 15:00</option>
+                            <option value="15:00">15:00 - 16:00</option>
+                            <option value="16:00">16:00 - 17:00</option>
+                            <option value="17:00">17:00 - 18:00</option>
+                        </select>
+                        <small class="time-note">Available slots shown below</small>
+                    </div>
+
+                    <div class="form-group reveal">
+                        <label for="depositAmount">Deposit Required *</label>
+                        <input type="text" id="depositAmount" readonly value="£25" placeholder="£25">
+                    </div>
+
+                    <div class="form-group reveal">
+                        <label for="notes">Additional Notes</label>
+                        <textarea id="notes" placeholder="Any special requests or style preferences?"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">Confirm Booking</button>
+                </form>
+
+                <div class="booking-info reveal">
+                    <h3>Booking Information</h3>
+                    <div class="info-card">
+                        <h4>Cancellation Policy</h4>
+                        <p>Free cancellation up to 24 hours before appointment. Late cancellations subject to 50% deposit charge.</p>
+                    </div>
+                    <div class="info-card">
+                        <h4>Deposit Required</h4>
+                        <p>20% deposit required to secure your appointment. Balance due on the day of service.</p>
+                    </div>
+                    <div class="info-card">
+                        <h4>Rescheduling</h4>
+                        <p>Free rescheduling up to 48 hours before your appointment. Contact us for changes.</p>
+                    </div>
+                    <div class="info-card">
+                        <h4>Hours</h4>
+                        <p>Monday - Friday: 9:00 AM - 6:00 PM<br>
+                        Saturday: 10:00 AM - 5:00 PM<br>
+                        Sunday: Closed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title reveal">Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item reveal">
+                    <div class="gallery-image">
+                        <i class="fas fa-image"></i>
+                        <p>Box Braids</p>
+                    </div>
+                </div>
+                <div class="gallery-item reveal">
+                    <div class="gallery-image">
+                        <i class="fas fa-image"></i>
+                        <p>Cornrows</p>
+                    </div>
+                </div>
+                <div class="gallery-item reveal">
+                    <div class="gallery-image">
+                        <i class="fas fa-image"></i>
+                        <p>Goddess Braids</p>
+                    </div>
+                </div>
+                <div class="gallery-item reveal">
+                    <div class="gallery-image">
+                        <i class="fas fa-image"></i>
+                        <p>Wig Styling</p>
+                    </div>
+                </div>
+                <div class="gallery-item reveal">
+                    <div class="gallery-image">
+                        <i class="fas fa-image"></i>
+                        <p>Kilo Braids</p>
+                    </div>
+                </div>
+                <div class="gallery-item reveal">
+                    <div class="gallery-image">
+                        <i class="fas fa-image"></i>
+                        <p>Crochet Braids</p>
+                    </div>
+                </div>
+                <div class="gallery-item reveal">
+                    <div class="gallery-image">
+                        <i class="fas fa-image"></i>
+                        <p>Style Details</p>
+                    </div>
+                </div>
+                <div class="gallery-item reveal">
+                    <div class="gallery-image">
+                        <i class="fas fa-image"></i>
+                        <p>Custom Design</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title reveal">Client Testimonials</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Absolutely stunning work! The braids are perfect and lasted so long. I've never felt more confident. Highly recommend!"</p>
+                    <p class="testimonial-author">- Sarah M.</p>
+                </div>
+
+                <div class="testimonial-card reveal">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"The experience was amazing. Professional, friendly, and the results exceeded my expectations. Worth every penny!"</p>
+                    <p class="testimonial-author">- Jade T.</p>
+                </div>
+
+                <div class="testimonial-card reveal">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Beautiful braids and such a welcoming atmosphere. The attention to detail is incredible. Already booked my next appointment!"</p>
+                    <p class="testimonial-author">- Amara K.</p>
+                </div>
+
+                <div class="testimonial-card reveal">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Finally found someone who understands luxury braiding. Every detail is perfection. You're the ace of braids for real!"</p>
+                    <p class="testimonial-author">- Nicole P.</p>
+                </div>
+
+                <div class="testimonial-card reveal">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"The booking system was so easy to use, and the staff made me feel so comfortable. Best service in Newcastle, hands down!"</p>
+                    <p class="testimonial-author">- Emma L.</p>
+                </div>
+
+                <div class="testimonial-card reveal">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Worth the wait! The quality is unmatched. I recommend Ace of Braids to everyone. True artists at work!"</p>
+                    <p class="testimonial-author">- Zara H.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title reveal">Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info reveal">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Newcastle-upon-Tyne, UK</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p><a href="tel:+441234567890">+44 (0) 1234 567890</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:hello@aceofbraids.com">hello@aceofbraids.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Hours</h4>
+                            <p>Mon - Fri: 9:00 AM - 6:00 PM<br>
+                            Sat: 10:00 AM - 5:00 PM<br>
+                            Sun: Closed</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form reveal" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section reveal">
+                    <h3>Ace of Braids</h3>
+                    <p>Premium luxury braiding services in Newcastle. Crafted with precision, styled with passion.</p>
+                </div>
+                <div class="footer-section reveal">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#booking">Booking</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section reveal">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/ace_ofbraids/" target="_blank" rel="noopener" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@ace_ofbraids" target="_blank" rel="noopener" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ace of Braids. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Confirmation Modal -->
+    <div class="modal" id="confirmationModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Booking Confirmed! ✨</h2>
+            </div>
+            <div class="modal-body">
+                <div class="success-animation">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <p id="confirmationMessage"></p>
+                <div class="confirmation-details" id="confirmationDetails"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="closeModal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
