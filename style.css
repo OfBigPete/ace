@@ -1079,11 +1079,34 @@ container {
 
     /* About */
     .about-content {
-        grid-template-columns: 1fr;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 1.5rem !important;
+        width: 100%;
+    }
+
+    .about-text {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+
+    .about-image {
+        width: 100%;
+        margin-top: 1rem;
+        justify-content: center;
     }
 
     .about-stats {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+        width: 100%;
+    }
+
+    .stat {
+        padding: 1rem !important;
+        font-size: 1rem !important;
     }
 
     /* Services */
