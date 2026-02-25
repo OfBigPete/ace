@@ -1044,6 +1044,46 @@ body {
    RESPONSIVE DESIGN
    ================================ */
 @media (max-width: 768px) {
+    }
+
+    @media (max-width: 900px) {
+        .about-stats {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            width: 100% !important;
+            gap: 1.2rem !important;
+        }
+        .stat {
+            width: 100% !important;
+            max-width: 350px !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            margin-bottom: 1.2rem !important;
+        }
+        .stat:last-child {
+            margin-bottom: 0 !important;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .about-stats {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            width: 100% !important;
+            gap: 1.2rem !important;
+        }
+        .stat {
+            width: 100% !important;
+            max-width: 350px !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            margin-bottom: 1.2rem !important;
+        }
+        .stat:last-child {
+            margin-bottom: 0 !important;
+        }
     .about-stats {
         display: flex !important;
         flex-direction: column !important;
