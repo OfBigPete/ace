@@ -1,3 +1,10 @@
+/* Ensure footer text is black */
+.footer-section h3,
+.footer-section h4,
+.footer-section p,
+.footer-section ul li a {
+    color: #000 !important;
+}
 /* ================================
    ROOT & VARIABLES
    ================================ */
