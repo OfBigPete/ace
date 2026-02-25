@@ -1044,6 +1044,21 @@ body {
    RESPONSIVE DESIGN
    ================================ */
 @media (max-width: 768px) {
+        .about-stats {
+            padding: 0 0.5rem;
+        }
+        .stat {
+            margin-bottom: 1.2rem !important;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+            border-radius: 12px;
+            width: 100%;
+            max-width: 350px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .stat:last-child {
+            margin-bottom: 0 !important;
+        }
     /* Navigation */
     .nav-menu {
         position: fixed;
