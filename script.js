@@ -1,3 +1,13 @@
+// Fallback for hamburger click if event listeners are lost
+window.hamburgerFallback = function() {
+    var hamburger = document.getElementById('hamburger');
+    var navMenu = document.getElementById('navMenu');
+    if (hamburger && navMenu) {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        console.log('Hamburger fallback triggered');
+    }
+};
 // ================================
 // INITIALIZATION & DOM ELEMENTS
 // ================================
@@ -10,8 +20,13 @@ const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY'; // Replace with your key
 const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID'; // Replace with your service ID
 const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID'; // Replace with your template ID
 
-// Initialize EmailJS
-emailjs.init(EMAILJS_PUBLIC_KEY);
+
+// Initialize EmailJS if available
+if (window.emailjs) {
+    emailjs.init(EMAILJS_PUBLIC_KEY);
+} else {
+    console.warn('EmailJS library not loaded. Email features will be disabled.');
+}
 
 document.addEventListener('DOMContentLoaded', function() {
     initializeApp();
@@ -103,13 +118,20 @@ function updateActiveNavLink(navLinks) {
 // MOBILE MENU
 // ================================
 function setupMobileMenu() {
+    console.log('setupMobileMenu called');
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('navMenu');
 
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navMenu.classList.toggle('active');
-    });
+    if (!hamburger) {
+        console.error('Hamburger element not found');
+    } else {
+        console.log('Hamburger element found');
+        hamburger.addEventListener('click', () => {
+            console.log('Hamburger clicked');
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+    }
 }
 
 function closeMobileMenu() {
@@ -510,7 +532,12 @@ function sendBookingEmails(formData) {
     };
 
     // Send admin notification
-    if (EMAILJS_SERVICE_ID && EMAILJS_TEMPLATE_ID && EMAILJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY') {
+    if (
+        window.emailjs &&
+        EMAILJS_SERVICE_ID &&
+        EMAILJS_TEMPLATE_ID &&
+        EMAILJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY'
+    ) {
         emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, adminEmailData)
             .then((response) => {
                 console.log('Admin email sent successfully:', response);
@@ -530,7 +557,7 @@ function sendBookingEmails(formData) {
                 // Don't break the booking even if email fails
             });
     } else {
-        console.warn('EmailJS not configured. Please set up your EmailJS credentials.');
+        console.warn('EmailJS not configured or not loaded. Please set up your EmailJS credentials and ensure the library is loaded.');
     }
 }
 

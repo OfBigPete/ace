@@ -39,6 +39,7 @@
                 <span></span>
                 <span></span>
             </div>
+            </div>
         </div>
     </nav>
 
@@ -77,9 +78,6 @@
                     </div>
                 </div>
                 <div class="about-image reveal">
-                    <div class="image-placeholder">
-                        <img src="images/logo.jpeg" alt="Ace of Braids Logo">
-                    </div>
                 </div>
             </div>
         </div>
@@ -155,94 +153,10 @@
 
     <!-- Booking Section -->
     <section class="booking" id="booking">
-        <div class="container">
+        <div class="container" style="text-align:center; padding: 40px 0;">
             <h2 class="section-title reveal">Book Your Appointment</h2>
-            <div class="booking-container">
-                <form class="booking-form" id="bookingForm">
-                    <div class="form-group reveal">
-                        <label for="clientName">Full Name *</label>
-                        <input type="text" id="clientName" required placeholder="Enter your full name">
-                    </div>
-
-                    <div class="form-group reveal">
-                        <label for="clientEmail">Email Address *</label>
-                        <input type="email" id="clientEmail" required placeholder="your@email.com">
-                    </div>
-
-                    <div class="form-group reveal">
-                        <label for="clientPhone">Phone Number *</label>
-                        <input type="tel" id="clientPhone" required placeholder="07XXX XXXXXX">
-                    </div>
-
-                    <div class="form-group reveal">
-                        <label for="service">Service *</label>
-                        <select id="service" required>
-                            <option value="">Select a service</option>
-                            <option value="Box Braids - £60-120">Box Braids - £60-120</option>
-                            <option value="Cornrows - £50-100">Cornrows - £50-100</option>
-                            <option value="Goddess Braids - £80-150">Goddess Braids - £80-150</option>
-                            <option value="Wig Styling - £40-80">Wig Styling - £40-80</option>
-                            <option value="Kilo Braids - £70-130">Kilo Braids - £70-130</option>
-                            <option value="Crochet Braids - £45-90">Crochet Braids - £45-90</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group reveal">
-                        <label for="appointmentDate">Preferred Date *</label>
-                        <input type="date" id="appointmentDate" required>
-                    </div>
-
-                    <div class="form-group reveal">
-                        <label for="appointmentTime">Time Slot *</label>
-                        <select id="appointmentTime" required>
-                            <option value="">Select a time</option>
-                            <option value="09:00">09:00 - 10:00</option>
-                            <option value="10:00">10:00 - 11:00</option>
-                            <option value="11:00">11:00 - 12:00</option>
-                            <option value="13:00">13:00 - 14:00</option>
-                            <option value="14:00">14:00 - 15:00</option>
-                            <option value="15:00">15:00 - 16:00</option>
-                            <option value="16:00">16:00 - 17:00</option>
-                            <option value="17:00">17:00 - 18:00</option>
-                        </select>
-                        <small class="time-note">Available slots shown below</small>
-                    </div>
-
-                    <div class="form-group reveal">
-                        <label for="depositAmount">Deposit Required *</label>
-                        <input type="text" id="depositAmount" readonly value="£25" placeholder="£25">
-                    </div>
-
-                    <div class="form-group reveal">
-                        <label for="notes">Additional Notes</label>
-                        <textarea id="notes" placeholder="Any special requests or style preferences?"></textarea>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary btn-large">Confirm Booking</button>
-                </form>
-
-                <div class="booking-info reveal">
-                    <h3>Booking Information</h3>
-                    <div class="info-card">
-                        <h4>Cancellation Policy</h4>
-                        <p>Free cancellation up to 24 hours before appointment. Late cancellations subject to 50% deposit charge.</p>
-                    </div>
-                    <div class="info-card">
-                        <h4>Deposit Required</h4>
-                        <p>20% deposit required to secure your appointment. Balance due on the day of service.</p>
-                    </div>
-                    <div class="info-card">
-                        <h4>Rescheduling</h4>
-                        <p>Free rescheduling up to 48 hours before your appointment. Contact us for changes.</p>
-                    </div>
-                    <div class="info-card">
-                        <h4>Hours</h4>
-                        <p>Monday - Friday: 9:00 AM - 6:00 PM<br>
-                        Saturday: 10:00 AM - 5:00 PM<br>
-                        Sunday: Closed</p>
-                    </div>
-                </div>
-            </div>
+            <script id="anywhere_book_now_script" src="https://assets.setmore.com/integration/book-now/live/v1/anywhere-book-now.js"></script>
+            <button id="Anywhere_button_iframe" class="anywhere-book-now-button" style=" background-color: #000; color: #fff; border: none; padding: 12px 18px; font-size: 14px; font-weight: 600; border-radius: 6px; cursor: pointer; " data-booking-url="https://modernflow.setmore.com" data-new-tab="false"> Book now </button>
         </div>
     </section>
 
