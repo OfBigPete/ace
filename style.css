@@ -371,19 +371,24 @@ body {
 }
 
 .about-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+    gap: 3rem;
     margin-left: auto;
     margin-right: auto;
+    width: 100%;
+    min-height: 400px;
 }
 
 @media (max-width: 900px) {
     .about-content {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         gap: 2rem;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
     }
     .about-image {
         justify-content: center;
